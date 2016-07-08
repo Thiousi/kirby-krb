@@ -47,6 +47,7 @@ The `krb() function` takes these parameters;
 - The file-type (css, or js).
 - The version number (needed to force re-downloads of cached assets).
 - Minify the assets, or not (defaults to Kirby standard way of including assets).
+- Add cache-control to the query (`asset.mime?v=version-number`).
 - Show debug-info in the console [F12].
 
 The example above combines / minifies several CSS-assets, adds some cache-control to it and does show debug-info in the console.
