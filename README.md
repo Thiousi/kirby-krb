@@ -10,6 +10,8 @@
 
 Kirby - KRB minifies and combines all assets (both Javascript and Style Sheets) on the fly in one, compressed file.
 
+It uses the excellent minifying library of **https://github.com/matthiasmullie/minify**
+
 - Less http-requests, good for SEO performance.
 - Less bits and bytes to download.
 - Version control.
@@ -82,6 +84,6 @@ c::set('krb_js_path', 'assets/js/my_scriptz.min.js');
 
 ****
 
-![Kirby - KRB](kirby-krb-1.gif "Kirby - KRB")
+![Kirby - KRB](kirby-krb.png"Kirby - KRB")
 
 *Version 1.0.0*
