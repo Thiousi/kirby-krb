@@ -12,7 +12,7 @@
 
 It uses the **excellent** minifying library of **https://github.com/matthiasmullie/minify**
 
-- Less http-requests, good for SEO performance.
+- Less **http-requests**, good for SEO performance.
 - Less bits and bytes to download.
 - Version control.
 - Extended debugging options.
@@ -24,8 +24,8 @@ More info about Kirby can be found at **http://getkirby.com**
 ### Installation
 
 - Download the .zip and extract it to the root of your site.
-- Don't know which files? Just use '/site/plugins/krb/'.
-- Optionally you can configure some settings in 'site/config/config.php'.
+- Don't know which files? Just use `/site/plugins/krb/`.
+- Optionally you can configure some settings in `site/config/configphp`.
 
 ### Usage
 
@@ -66,14 +66,14 @@ Wondering what all the shizzle is about? Turn on the debug-parameter, hit [F12] 
 
 ### Config
 
-By default, no 'config' is needed. But you can set your preferences like the one below;
+By default, no `config` is needed. But you can set your preferences like the one below;
 
 ```
 c::set('krb_html_min', true);
 c::set('krb_css_path', 'assets/css/my_stylez.min.css');
 c::set('krb_js_path', 'assets/js/my_scriptz.min.js');
 ```
-- The first parameter also minifies your 'html' output, which is cool - when your code is 100% correct (missing one semi-column ; can corrupt your scripts - so be carefull when used).
+- The first parameter also minifies your `html` output, which is cool - when your code is 100% correct (missing one semi-column ; can corrupt your scripts - so be careful when used).
 - The other two parameters lets you override the default minified / combined asset-path.
 
 ###Important!###
@@ -86,4 +86,4 @@ c::set('krb_js_path', 'assets/js/my_scriptz.min.js');
 
 ![Kirby - KRB](kirby-krb.png "Kirby - KRB")
 
-*KRB - real time minifying and combining of your assets, with debuggin set in config.*
+*KRB - real time minifying and combining of your assets, with debugging set in config.*

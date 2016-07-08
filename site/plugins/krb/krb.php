@@ -311,7 +311,7 @@ function krb($assets, $type, $version, $minify, $cache, $debug) {
 
       $plural = $processed > 1?' ':'';
 
-      krb_msg('minifyed   > 1 ' . $type . ' file ' . $plural . '[' . krb_filesize(filesize($krb)) . ']', 0);
+      krb_msg('minified   > 1 ' . $type . ' file ' . $plural . '[' . krb_filesize(filesize($krb)) . ']', 0);
       krb_msg('difference > ' . sprintf('%0.2f', (($filesizes - filesize($krb)) / $filesizes) * 100) . '%', 2);
       krb_msg('finalised  > ' . KRB_ROOT . $krb . $cache, 0);
       krb_msg('optimising > ended', 2);
