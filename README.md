@@ -25,7 +25,7 @@ More info about Kirby can be found at **http://getkirby.com**
 
 - Download the .zip and extract it to the root of your site.
 - Don't know which files? Just use `/site/plugins/krb/`.
-- Optionally you can configure some settings in `site/config/configphp`.
+- Optionally you can configure some settings in `site/config/config.php`.
 
 ### Usage
 
@@ -61,9 +61,9 @@ The example above combines / minifies several CSS-assets, adds some cache-contro
             true);
 ```
 
-This example has only one file to include, does not minify it and has version-control `1.4` attached to it.
+This example has only one file (`js type`) to include, version-control `1.4` attached to it and does not minify the (single) asset - while `version control` and `debugging` are active.
 
-Wondering what all the shizzle is about? Turn on the debug-parameter, hit [F12] and you'll see the power of minifying and combinding all your assets
+Wondering what all the shizzle is about? Turn on the debug-parameter, hit [F12] and you'll see the power of minifying and combining all your assets
 
 ### Config
 
