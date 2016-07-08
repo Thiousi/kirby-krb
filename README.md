@@ -13,8 +13,8 @@
 It uses the **excellent** minifying library of **https://github.com/matthiasmullie/minify**
 
 - Less **http-requests**, good for SEO performance.
-- Less bits and bytes to download.
-- Version control.
+- Less **bits and bytes** to download.
+- **Version control**.
 - Extended debugging options.
 - Several MIME-types, one syntax.
 - ...and more!
@@ -61,7 +61,7 @@ The example above combines / minifies several CSS-assets, adds some cache-contro
             true);
 ```
 
-This example has only one file to include, does not minify it and has version-control '1.4' attached to it.
+This example has only one file to include, does not minify it and has version-control `1.4` attached to it.
 
 Wondering what all the shizzle is about? Turn on the debug-parameter, hit [F12] and you'll see the power of minifying and combinding all your assets
 
