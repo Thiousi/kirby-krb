@@ -79,7 +79,7 @@ c::set('krb_js_path', 'assets/js/my_scriptz.min.js');
 ###Important!###
 
 - Like mentioned above, minifying does an excellent job with good codes; but when your (or a third-party) script is not 100% correct, it can be corrupted. Most of the time a semi-column ; is missing between the different functions.
-- Also, turning on the cache or using plug-ins like cachebuster can "corrupt" the functionality of 'KRB'.
+- Also, turning on the cache or using plug-ins like **cachebuster** can "corrupt" the functionality of `KRB`.
 - Be sure to test all, before combining / minifying / etc...
 
 ****
