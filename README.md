@@ -2,7 +2,11 @@
 
 #### Version 1.0.0 - 2016-07-08
 
-- Initial Public Offering...
+- Initial Public Offering.
+
+#### Version 1.1.0 - 2016-07-09
+
+- Better debug options.
 
 ****
 
@@ -20,6 +24,8 @@ It uses the **excellent** minifying library of **https://github.com/matthiasmull
 - ...and more!
 
 More info about Kirby can be found at **http://getkirby.com**
+
+More info about this plug-in can be found at **https://forum.getkirby.com/t/4651/**
 
 ### Installation
 

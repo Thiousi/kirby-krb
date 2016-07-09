@@ -134,6 +134,11 @@ function krb($assets, $type, $version, $minify, $cache, $debug) {
 
   if ($minify != true) {
 
+      if ($debug == true) {
+        krb_msg('----------------------------------------------', 0);
+        krb_msg('optimising > disabled [' . $type . ']', 2);
+      }
+
 /* Not-minified assets are more than one */
 
     if (is_array($assets)) {
@@ -149,6 +154,9 @@ function krb($assets, $type, $version, $minify, $cache, $debug) {
             break;
         }
 
+        if ($debug == true) {
+          krb_msg(' reading   > ' . $uri . ' [' . krb_filesize(filesize($uri)) . ']', 1);
+        }
       }
 
 /* Not-minified asset is single */
@@ -165,7 +173,15 @@ function krb($assets, $type, $version, $minify, $cache, $debug) {
           $output .= '<script src="' . KRB_ROOT . $uri . $cache . '"></script>' . chr(10);
           break;
       }
+
+        if ($debug == true) {
+          krb_msg(' reading   > ' . $uri . ' [' . krb_filesize(filesize($uri)) . ']', 1);
+        }
+
     }
+
+  krb_msg('----------------------------------------------', 0);
+  krb_msg('optimising > disabled [' . $type .'] : current version ' . $version, 2);
 
 /* --------------------------------- */
 /* 2#3 - Assets MUST be minified     */
@@ -314,12 +330,12 @@ function krb($assets, $type, $version, $minify, $cache, $debug) {
       krb_msg('minified   > 1 ' . $type . ' file ' . $plural . '[' . krb_filesize(filesize($krb)) . ']', 0);
       krb_msg('difference > ' . sprintf('%0.2f', (($filesizes - filesize($krb)) / $filesizes) * 100) . '%', 2);
       krb_msg('finalised  > ' . KRB_ROOT . $krb . $cache, 0);
-      krb_msg('optimising > ended', 2);
+      krb_msg('optimising > ended [' . $type .'] : old version ' . $version_prev . ' | new version ' . $version, 2);
 
     } else if ($debug == true && $krb_needed == false) {
 
       krb_msg('----------------------------------------------', 0);
-      krb_msg('optimising > skipped [' . $type .'] : old version ' . $version_prev . ' | new version ' . $version, 2);
+      krb_msg('optimising > not needed [' . $type .'] : old version ' . $version_prev . ' | new version ' . $version, 2);
       krb_msg('finalised  > ' . KRB_ROOT . $krb . $cache, 0);
 
     }
