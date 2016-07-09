@@ -7,6 +7,7 @@
 #### Version 1.1.0 - 2016-07-09
 
 - Better debug options.
+- Option to `defer` and `async` the minified js-output (`config.php`).
 
 ****
 
@@ -76,12 +77,16 @@ Wondering what all the shizzle is about? Turn on the debug-parameter, hit [F12] 
 By default, no `config` is needed. But you can set your preferences like the one below;
 
 ```
-c::set('krb_html_min', true);
-c::set('krb_css_path', 'assets/css/my_stylez.min.css');
-c::set('krb_js_path', 'assets/js/my_scriptz.min.js');
+c::set('krb_html_min', false);
+c::set('krb_css_path', 'assets/css/my_style.min.css');
+c::set('krb_js_path', 'assets/js/my_script.min.js');
+c::set('krb_js_async', false);
+c::set('krb_js_defer', false);
 ```
+
 - The first parameter also minifies your `html` output, which is cool - when your code is 100% correct (missing one semi-column ; can corrupt your scripts - so be careful when used).
-- The other two parameters lets you override the default minified / combined asset-path.
+- The next two parameters let you override the default minified / combined asset-path.
+- The last two parameters let you set the `async` and `defer` option for the final, minified js-output.
 
 ###Important!###
 

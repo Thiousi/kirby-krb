@@ -313,12 +313,16 @@ function krb($assets, $type, $version, $minify, $cache, $debug) {
 
 /* Build the output tags */
 
+/* Ref. http://stackoverflow.com/a/10731231 */
+
     switch ($type) {
       case 'css':
         $output .= '<link rel="stylesheet" href="' . KRB_ROOT . $krb . $cache . '">' . chr(10);
         break;
       case 'js':
-        $output .= '<script src="' . KRB_ROOT . $krb . $cache . '"></script>' . chr(10);
+        $krb_defer = c::get('krb_js_defer', false) == true?' defer':'';
+        $krb_async = c::get('krb_js_async', false) == true?' async':'';
+        $output .= '<script'. $krb_async . $krb_defer . ' src="' . KRB_ROOT . $krb . $cache . '"></script>' . chr(10);
         break;
     }
 
