@@ -136,7 +136,7 @@ function krb($assets, $type, $version, $minify, $cache, $debug) {
 
       if ($debug == true) {
         krb_msg('----------------------------------------------', 0);
-        krb_msg('optimising > disabled [' . $type . ']', 2);
+        krb_msg('optimising > disabled [' . $type .'] : current version ' . $version, 2);
       }
 
 /* Not-minified assets are more than one */
@@ -179,9 +179,6 @@ function krb($assets, $type, $version, $minify, $cache, $debug) {
         }
 
     }
-
-  krb_msg('----------------------------------------------', 0);
-  krb_msg('optimising > disabled [' . $type .'] : current version ' . $version, 2);
 
 /* --------------------------------- */
 /* 2#3 - Assets MUST be minified     */
