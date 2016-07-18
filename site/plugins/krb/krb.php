@@ -351,9 +351,9 @@ function krb($assets, $type, $version, $minify, $cache, $debug) {
 /* C#C - Minify all html */
 /* ----------------------------------------------------------- */
 
-/* Only minify when explicity set - skip panel always */
+/* Only minify when explicity set - skip panel and downloads always */
 
-if (c::get('krb_html_min') == true && !function_exists('panel')):
+if (c::get('krb_html_min') == true && !function_exists('panel') && strpos($_SERVER['REQUEST_URI'], 'download') != true):
 
 /* Ref. http://stackoverflow.com/a/6225706 */
 
