@@ -314,15 +314,14 @@ function krb($assets, $type, $version, $minify, $cache, $debug) {
 
     switch ($type) {
       case 'css':
-        $output .= '<link rel="stylesheet" href="' . KRB_ROOT . $krb . $cache . '">' . chr(10);
+        $output .= '<link rel="stylesheet" href="' . KRB_ROOT . $krb . $cache . '" id="krb_css">' . chr(10);
         break;
       case 'js':
         $krb_defer = c::get('krb_js_defer', false) == true?' defer':'';
         $krb_async = c::get('krb_js_async', false) == true?' async':'';
-        $output .= '<script'. $krb_async . $krb_defer . ' src="' . KRB_ROOT . $krb . $cache . '"></script>' . chr(10);
+        $output .= '<script'. $krb_async . $krb_defer . ' src="' . KRB_ROOT . $krb . $cache . '" id="krb_js"></script>' . chr(10);
         break;
     }
-
 
     if ($debug == true && $krb_needed == true) {
 
