@@ -1,0 +1,8 @@
+{
+"name": "krb-plugin",
+"description": "KRB minifies and combines all assets (both Javascript and Style Sheets) on the fly in one, compressed file.",
+"author": "1n3JgKl9pQ6cUMrW <https://github.com/1n3JgKl9pQ6cUMrW>",
+"license": "Undefined",
+"version": "1.1.0",
+"type": "kirby-plugin"
+}
