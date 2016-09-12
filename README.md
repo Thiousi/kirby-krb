@@ -1,3 +1,5 @@
+This is a fork of the official KRB repo that is both git submodules and Kirby CLI friendly.
+
 # [Kirby - KRB](https://github.com/1n3JgKl9pQ6cUMrW/kirby-krb)
 
 #### Version 1.0.0 - 2016-07-08
